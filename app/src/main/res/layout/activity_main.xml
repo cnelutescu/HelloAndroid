@@ -19,8 +19,12 @@
         android:id="@+id/ImageViewU"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/Llh33"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:alpha="0.6"
         android:scaleType="center"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo3" />
 
     <LinearLayout
         android:id="@+id/Llh1"
@@ -87,7 +91,7 @@
         android:layout_toStartOf="@+id/Llh4"
         android:adjustViewBounds="true"
         android:padding="10dp"
-        android:src="@drawable/address2" />
+        android:src="@drawable/address4" />
 
     <LinearLayout
         android:id="@+id/Llh33"
