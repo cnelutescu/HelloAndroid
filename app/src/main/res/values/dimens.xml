@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_vertical_margin">2dp</dimen>
-    <dimen name="activity_horizontal_margin">2dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="padding1">1dp</dimen>
+    <dimen name="padding2">10dp</dimen>
+
+    <dimen name="text_size1">12sp</dimen>
+    <dimen name="text_size2">15sp</dimen>
+    <dimen name="text_size3">18sp</dimen>
 </resources>

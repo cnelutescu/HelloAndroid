@@ -1,220 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rel_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient" >
-
+    android:background="@drawable/gradient">
+    <!-- ImageView1 -->
     <ImageView
         android:id="@+id/ImageView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         android:src="@drawable/udacity3"
-        android:visibility="visible" />
-
+        android:visibility="visible"
+        tools:ignore="ContentDescription" />
+    <!-- ImageViewU -->
     <ImageView
         android:id="@+id/ImageViewU"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/Llh33"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:alpha="0.6"
-        android:scaleType="center"
-        android:src="@drawable/logo3" />
-
+        android:layout_below="@+id/ImageView1"
+        android:alpha="0.7"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo3"
+        tools:ignore="ContentDescription" />
+    <!-- Llh1 -->
     <LinearLayout
         android:id="@+id/Llh1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
         android:layout_below="@id/ImageView1"
-        >
-
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_margin">
         <ImageView
             android:id="@+id/ImageView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.3"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:src="@drawable/earth11" />
+            android:src="@drawable/earth11"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:padding="10dp"
-            android:textAlignment="viewStart"
-            android:textColor="#18FFFF"
-            android:textSize="18sp"
-            android:textStyle="bold|italic"
-            android:typeface="serif"
             android:layout_gravity="start"
-            android:text="@string/slogan1" />
+            android:layout_weight="2.5"
+            android:padding="@dimen/activity_margin"
+            android:text="@string/slogan1"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size3"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- Llh2 -->
     <LinearLayout
         android:id="@+id/Llh2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:layout_centerInParent="true" >
+        android:padding="@dimen/activity_margin">
         <ImageView
             android:id="@+id/ImageView3"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:src="@drawable/job6" />
+            android:src="@drawable/job6"
+            tools:ignore="ContentDescription" />
+
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="2.5"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#18FFFF"
-            android:textSize="18sp"
+            android:layout_weight="1.9"
+            android:padding="@dimen/padding2"
+            android:text="@string/slogan2"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size3"
             android:textStyle="bold|italic"
-            android:typeface="serif"
-            android:padding="10dp"
-            android:text="@string/slogan2" />
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- ImageView66 -->
     <ImageView
         android:id="@+id/ImageView66"
-        android:layout_width="70dp"
+        android:layout_width="80dp"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_margin"
         android:layout_toLeftOf="@+id/Llh4"
         android:layout_toStartOf="@+id/Llh4"
         android:adjustViewBounds="true"
-        android:padding="10dp"
+        android:contentDescription="@string/udacity_address"
+        android:padding="@dimen/padding2"
         android:src="@drawable/address4" />
-
+    <!-- Llh33 -->
     <LinearLayout
         android:id="@+id/Llh33"
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Llh4"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="1dp" >
-
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@id/Llh4"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:padding="1dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:textColor="#18FFFF"
-            android:textSize="10sp"
+            android:padding="@dimen/padding1"
+            android:text="@string/website"
+            android:autoLink="web"
+            android:textColorLink="@color/linkColor"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size1"
             android:textStyle="bold"
-            android:typeface="serif"
-            android:text="@string/website" />
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- Llh3 -->
     <LinearLayout
         android:id="@+id/Llh3"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_above="@id/Llh33"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" >
 
+        android:layout_alignLeft="@id/Llh4"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@id/Llh4"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:padding="1dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:textColor="#18FFFF"
-            android:textSize="15sp"
+            android:padding="@dimen/padding1"
+            android:text="@string/tel"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:autoLink="phone"
+            android:textColorLink="@color/textColor"
+            android:textSize="@dimen/text_size2"
             android:textStyle="bold"
-            android:typeface="serif"
-            android:text="@string/tel" />
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- Llh4 -->
     <LinearLayout
         android:id="@+id/Llh4"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_above="@id/Llh3"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" >
-
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:padding="1dp"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:gravity="end"
+            android:padding="@dimen/padding1"
+            android:text="@string/adr2"
             android:textAlignment="textEnd"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:textColor="#18FFFF"
-            android:textSize="15sp"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size2"
             android:textStyle="bold|italic"
-            android:typeface="serif"
-            android:text="@string/adr2" />
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- Llh5 -->
     <LinearLayout
         android:id="@+id/Llh5"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_above="@id/Llh4"
-        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/Llh4"
         android:layout_alignParentEnd="true"
-        >
-
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@id/Llh4"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:padding="1dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:textColor="#18FFFF"
-            android:textSize="15sp"
+            android:padding="@dimen/padding1"
+            android:text="@string/adr1"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size2"
             android:textStyle="bold|italic"
-            android:typeface="serif"
-            android:text="@string/adr1" />
+            android:typeface="serif" />
     </LinearLayout>
-
+    <!-- Llh6 -->
     <LinearLayout
         android:id="@+id/Llh6"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_above="@id/Llh5"
-        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/Llh4"
         android:layout_alignParentEnd="true"
-        >
-
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@id/Llh4"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:padding="5dp"
-            android:textAlignment="textEnd"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:textColor="#18FFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:typeface="serif"
+            android:padding="@dimen/padding1"
             android:text="@string/udacity"
-/>
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size3"
+            android:textStyle="bold"
+            android:typeface="serif" />
     </LinearLayout>
 
 </RelativeLayout>
